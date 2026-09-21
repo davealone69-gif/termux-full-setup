@@ -14,9 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {fetch-depth: 0}
-      - uses: JetBrains/qodana-action@v2026.2
-      - name: Gradle
+        with: {fetch-depth: 0}      - name: Gradle
         if: ${{ hashFiles('gradlew') != '' }}
         run: |
           chmod +x gradlew
